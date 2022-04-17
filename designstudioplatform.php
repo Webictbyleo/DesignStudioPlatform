@@ -3,7 +3,7 @@
 	
 	class API{
 		
-		const APIendPoint = 'http://cseditor.com/api/v2/',
+		const APIendPoint = 'https://designrstudio.cloud/api/v2/',
 		APIVERSION = 2,
 		Connection_Error = 'Could not connect to endpoint',
 		InvalidFile_Error = 'No valid file found',
