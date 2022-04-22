@@ -3,7 +3,7 @@
 	
 	class API{
 		
-		const APIendPoint = 'https://designrstudio.cloud/api/v2/',
+		const APIendPoint = 'https://designeditor-as-service.cloud/api/v2/',
 		APIVERSION = 2,
 		Connection_Error = 'Could not connect to endpoint',
 		InvalidFile_Error = 'No valid file found',
@@ -89,7 +89,9 @@
 			CURLOPT_CONNECTTIMEOUT_MS=>$timeout,
 			CURLOPT_TIMEOUT_MS=>$timeout,
 			CURLOPT_HTTPHEADER=>$headers,
-			CURLOPT_USERAGENT=>__CLASS__.' '.self::APIVERSION
+			CURLOPT_USERAGENT=>__CLASS__.' '.self::APIVERSION,
+			CURLOPT_SSL_VERIFYHOST=>0,
+			CURLOPT_SSL_VERIFYPEER=>false
 			);
 			if(isset($data)){
 				$in = http_build_query($data);
