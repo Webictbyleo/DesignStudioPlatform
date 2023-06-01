@@ -135,9 +135,9 @@
 			
 			curl_close($http);
 			return (Object)array('body'=>$body['result'],'headers'=>$headers);
-			}catch(Exception $e){
+			}catch(\Exception $e){
 				if($http)curl_close($http);
-				throw new \Exception($e->getMessage(),$this->getCode());
+				throw new \Exception($e->getMessage(),$e->getCode());
 			}
 		}
 		private function isOnHold(){
